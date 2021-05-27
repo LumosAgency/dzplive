@@ -1,0 +1,195 @@
+$black: #000;
+$teal: #30647A;
+$red: #DD4C31;
+$darkblue: #090A2C;
+$yellow: #FFA100;
+$white: #F2F9FF;
+$headerfont: 'Jost',
+sans-serif;
+$bodyfont: 'Roboto',
+sans-serif;
+$gap: 1em;
+
+@mixin gap() {
+    gap: 1.5em 1.5em;
+
+    @media screen and (max-width: 1000px) {
+        gap: 1em 1em;
+    }
+
+    @media screen and (max-width: 800px) {
+        gap: .5em .5em;
+    }
+}
+
+%box {
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: 1200px) {
+        padding: 1em;
+    }
+}
+
+%box-two {
+    border: 1px solid $yellow;
+    padding: $gap;
+    position: relative;
+    overflow: hidden;
+    background: rgba($darkblue, .5);
+
+    @media only screen and (max-width: 1200px) {
+        padding: 1em;
+    }
+}
+
+%grid-one {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas: ".";
+}
+
+%grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "."
+            ".";
+    }
+
+    @media only screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "."
+            ".";
+    }
+}
+
+%grid-three-one {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "."
+            ".";
+    }
+
+    @media only screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "."
+    }
+}
+
+%grid-one-three {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". .";
+
+    @media only screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "."
+            ".";
+    }
+}
+
+%grid-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". . .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            ". ."
+    }
+
+    @media only screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "."
+    }
+}
+
+%grid-four {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". . . .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            ". ."
+    }
+    @media only screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "."
+    }
+}
+
+%grid-sidebar {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "."
+    }
+}
+
+%grid-five {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    @include gap();
+    grid-template-areas:
+        ". . . . .";
+
+    @media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            ". . . .";
+    }
+}

@@ -1,0 +1,53 @@
+#archive {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    background: $black url('../img/event.png') center center repeat;
+    background-attachment: fixed;
+    border-top: 1px solid $yellow;
+
+    .container {
+        .grid {
+            @extend %grid-sidebar;
+        }
+        .grid-1 {
+            @extend %grid-one;
+        }
+    }
+}
+aside {
+    .inner {
+        @extend %box;
+        order: 1;
+        padding: 0;
+
+        li {
+            display: block;
+            margin-bottom: 1em;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            a {
+                color: $white;
+                transition: all .8s ease-in-out;
+
+                .title {
+                    display: block;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    margin-bottom: 5px;
+                }
+
+                &:hover,
+                &[aria-current] {
+                    color: $teal;
+                    transition: all .2s ease-in-out;
+                }
+                &[aria-current] {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

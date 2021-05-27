@@ -1,0 +1,55 @@
+.products.columns-4 {
+    all: unset;
+    @extend %grid-three;
+
+}
+
+.woocommerce ul.products {
+    @extend %grid-three;
+    &:before,
+    &:after {
+        display: none;
+    }
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+    width: 100%;
+    margin: 0;
+    float: none;
+    @media only screen and (max-width: 768px) {
+        all: unset;
+        width: 100% !important;
+    }
+}
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price {
+    color: $white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.woocommerce .quantity .qty {
+    height: 50px;
+}
+.woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon {
+    display: flex;
+}
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
+    width: fit-content;
+}
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img{
+    width: 75px;
+}
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    padding: .8em .5em;
+    font-size: 1.2em;
+}
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment {
+    background: $darkblue;
+}
+.select2-container .select2-selection--single {
+    min-height: 45px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 45px;
+}

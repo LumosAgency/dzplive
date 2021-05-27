@@ -1,0 +1,19 @@
+.page-header {
+    padding: 4em 0 3em;
+    position: relative;
+    h1 {
+        &:after {
+            display: block;
+            content: '';
+            width: 80%;
+            margin-left: 10%;
+            height: 4px;
+            background: $yellow;
+            margin-top: .5em;
+            margin-bottom: 0;
+        }
+    }
+    .share-wrap {
+        position: relative;
+    }
+}
